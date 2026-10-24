@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Broken Destek</title>
+<meta name="description" content="Broken uygulaması için destek, sık sorulan sorular ve iletişim.">
+<meta name="theme-color" content="#181818">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #181818;
+    --surface: rgba(255, 255, 255, 0.05);
+    --text: #ffffff;
+    --muted: rgba(255, 255, 255, 0.68);
+    --border: rgba(255, 255, 255, 0.55);
+    --hairline: rgba(255, 255, 255, 0.14);
+    --button-bg: #ffffff;
+    --button-text: #050505;
+    --radius: 8px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 40px 0 8px; text-align: center; }
+  .logo { display: inline-block; line-height: 0; }
+  .logo svg { width: 97px; height: 30px; display: block; }
+  .intro { padding: 56px 0 32px; }
+  h1 {
+    font-weight: 500;
+    font-size: clamp(28px, 6vw, 36px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px;
+  }
+  .lead { font-style: italic; font-size: 16px; line-height: 23px; margin: 0; color: var(--text); }
+  .contact {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 16px;
+    margin: 0 0 40px;
+  }
+  .contact h2 { margin: 0 0 8px; font-size: 16px; font-weight: 600; }
+  .contact p { margin: 0 0 20px; font-style: italic; line-height: 23px; }
+  .btn {
+    display: block;
+    background: var(--button-bg);
+    color: var(--button-text);
+    text-align: center;
+    text-decoration: none;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px;
+    border-radius: var(--radius);
+  }
+  .btn:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+  .meta { font-size: 14px; color: var(--muted); margin: 14px 0 0 !important; font-style: normal !important; }
+  h2.section { font-size: 20px; font-weight: 500; margin: 0 0 16px; }
+  details {
+    background: var(--surface);
+    border: 0.5px solid var(--hairline);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+  }
+  details[open] { border-color: var(--border); }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 16px 44px 16px 16px;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+    border-radius: var(--radius);
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 1.5px solid var(--text);
+    border-bottom: 1.5px solid var(--text);
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform .2s ease;
+  }
+  details[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+  .answer { padding: 0 16px 16px; font-style: italic; line-height: 23px; color: var(--muted); }
+  .answer p { margin: 0 0 10px; }
+  .answer p:last-child { margin-bottom: 0; }
+  a { color: var(--text); text-underline-offset: 3px; }
+  .note {
+    border-top: 0.5px solid var(--hairline);
+    margin: 40px 0 0;
+    padding-top: 24px;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--muted);
+  }
+  .note strong { color: var(--text); font-weight: 600; }
+  footer {
+    padding: 40px 0 52px;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="../" aria-label="Broken ana sayfa"><svg viewBox="0 0 64.58 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Broken"><g><path d="M53.1246 19.7597C52.8576 19.7597 52.7241 19.6618 52.7241 19.466C52.7241 19.3058 52.8398 19.1989 53.0712 19.1455L53.3916 19.0921C53.7655 19.0209 54.0058 18.9141 54.1126 18.7717C54.2372 18.6115 54.2995 18.3445 54.2995 17.9706V8.99867C54.2995 8.67825 54.2461 8.46463 54.1393 8.35782C54.0503 8.23321 53.8812 8.1531 53.6319 8.1175L53.0712 8.03739C52.8398 8.01959 52.7241 7.92168 52.7241 7.74367C52.7241 7.60125 52.8665 7.50334 53.1513 7.44994C53.7031 7.36093 54.1215 7.21852 54.4063 7.0227C54.7089 6.82689 55.0205 6.58657 55.3409 6.30174C55.5011 6.14153 55.6346 6.06142 55.7414 6.06142C55.9016 6.06142 55.9817 6.16823 55.9817 6.38185V7.58345C55.9817 7.74367 56.0351 7.85047 56.142 7.90388C56.2666 7.93948 56.4001 7.88608 56.5425 7.74367C57.2546 7.06721 57.8776 6.60437 58.4116 6.35515C58.9635 6.10593 59.542 5.98132 60.1473 5.98132C60.9484 5.98132 61.5892 6.26614 62.0699 6.83579C62.5505 7.38764 62.7908 8.20651 62.7908 9.2924V17.9706C62.7908 18.3445 62.8442 18.6115 62.951 18.7717C63.0756 18.9141 63.3249 19.012 63.6987 19.0654L64.2861 19.1455C64.482 19.1811 64.5799 19.288 64.5799 19.466C64.5799 19.6618 64.4731 19.7597 64.2594 19.7597H59.7735C59.5242 19.7597 59.3996 19.6618 59.3996 19.466C59.3996 19.288 59.4975 19.1811 59.6934 19.1455L60.0672 19.0921C60.441 19.0387 60.6813 18.9319 60.7882 18.7717C60.9128 18.6115 60.9751 18.3445 60.9751 17.9706V9.58612C60.9751 8.71385 60.8149 8.0997 60.4944 7.74367C60.174 7.38763 59.7201 7.20962 59.1326 7.20962C58.563 7.20962 58.0467 7.37873 57.5839 7.71696C57.1388 8.03739 56.7828 8.47353 56.5158 9.02537C56.2488 9.55942 56.1153 10.1558 56.1153 10.8144V17.9706C56.1153 18.3445 56.1687 18.6115 56.2755 18.7717C56.4001 18.9319 56.6493 19.0298 57.0231 19.0654L57.7441 19.1455C57.9399 19.1811 58.0378 19.279 58.0378 19.4393C58.0378 19.6529 57.9043 19.7597 57.6373 19.7597H53.1246Z" fill="white"/><path d="M47.9586 20C47.1041 20 46.3386 19.7152 45.6622 19.1455C44.9857 18.5759 44.4427 17.7748 44.0333 16.7423C43.6417 15.692 43.4459 14.4815 43.4459 13.1108C43.4459 11.7045 43.6506 10.4673 44.06 9.39921C44.4695 8.33112 45.0302 7.49444 45.7423 6.88919C46.4543 6.28394 47.2465 5.98132 48.1188 5.98132C49.1691 5.98132 50.0146 6.41745 50.6555 7.28973C51.3141 8.1442 51.6435 9.54162 51.6435 11.482C51.6435 12.0694 51.4209 12.3632 50.9759 12.3632H45.9025C45.5464 12.3632 45.3684 12.5679 45.3684 12.9773C45.3684 14.8643 45.6444 16.2795 46.1962 17.223C46.748 18.1665 47.4512 18.6382 48.3057 18.6382C48.9821 18.6382 49.534 18.3979 49.9612 17.9172C50.3885 17.4366 50.7356 16.6266 51.0026 15.4873C51.056 15.2915 51.1717 15.1936 51.3497 15.1936C51.5634 15.1936 51.6435 15.3716 51.5901 15.7276C51.3052 17.312 50.8513 18.4246 50.2282 19.0654C49.6052 19.6885 48.8486 20 47.9586 20ZM45.8224 11.6956H48.5193C49.3738 11.6956 49.801 11.2506 49.801 10.3605C49.801 9.20339 49.6586 8.29551 49.3738 7.63686C49.0889 6.9782 48.6617 6.64887 48.0921 6.64887C47.3978 6.64887 46.8104 7.04941 46.3297 7.85047C45.8669 8.65154 45.5642 9.79084 45.4218 11.2684C45.3862 11.5532 45.5197 11.6956 45.8224 11.6956Z" fill="white"/><path d="M32.3659 19.7597C32.1523 19.7597 32.0454 19.6618 32.0454 19.466C32.0454 19.2879 32.1434 19.1811 32.3392 19.1455L32.713 19.0921C33.0868 19.0387 33.3272 18.9319 33.434 18.7717C33.5586 18.6115 33.6209 18.3445 33.6209 17.9706V2.67023C33.6209 2.3498 33.5675 2.13618 33.4607 2.02937C33.3717 1.90476 33.2025 1.82466 32.9533 1.78905L32.3926 1.70894C32.1968 1.67334 32.0988 1.56653 32.0988 1.38852C32.0988 1.2105 32.1968 1.10369 32.3926 1.06809C32.891 0.961281 33.3094 0.836671 33.6476 0.694258C33.9858 0.551846 34.2706 0.409434 34.5021 0.267023C34.7869 0.0890075 35.0005 0 35.1429 0C35.3387 0 35.4366 0.142412 35.4366 0.427236V11.6155C35.4366 11.7935 35.5078 11.9092 35.6503 11.9626C35.8105 11.9982 35.9618 11.9359 36.1042 11.7757L39.2284 8.41122C39.6022 8.00178 39.7535 7.66355 39.6823 7.39653C39.6289 7.11171 39.4242 6.93369 39.0681 6.86248L38.454 6.75568C38.2226 6.70227 38.1069 6.58656 38.1069 6.40855C38.1069 6.23053 38.2315 6.14152 38.4807 6.14152H43.0735C43.3227 6.14152 43.4473 6.23943 43.4473 6.43525C43.4473 6.63107 43.3316 6.73787 43.1002 6.75568L42.8599 6.78238C42.4504 6.81798 42.041 6.9782 41.6316 7.26302C41.2221 7.53004 40.7326 7.95728 40.1629 8.54473L38.5074 10.3071C38.1336 10.7165 38.0446 11.117 38.2404 11.5087L41.6049 17.9706C41.8007 18.3267 42.0143 18.5848 42.2457 18.745C42.4771 18.9052 42.762 19.0209 43.1002 19.0921L43.3672 19.1455C43.5808 19.1989 43.6876 19.3057 43.6876 19.466C43.6876 19.6618 43.563 19.7597 43.3138 19.7597H38.6676C38.4184 19.7597 38.2938 19.6618 38.2938 19.466C38.2938 19.2879 38.4095 19.1811 38.6409 19.1455L39.0948 19.0921C39.7713 19.0031 39.9137 18.567 39.5221 17.7837L36.9854 12.8438C36.8964 12.6658 36.7628 12.5679 36.5848 12.5501C36.4246 12.5323 36.2733 12.5946 36.1309 12.737L35.8372 13.0307C35.677 13.1909 35.5701 13.3511 35.5167 13.5114C35.4633 13.6716 35.4366 13.8496 35.4366 14.0454V17.9706C35.4366 18.3445 35.49 18.6115 35.5968 18.7717C35.7215 18.9319 35.9707 19.0298 36.3445 19.0654L37.0655 19.1455C37.2613 19.1811 37.3592 19.2879 37.3592 19.466C37.3592 19.6618 37.2524 19.7597 37.0388 19.7597H32.3659Z" fill="white"/><path d="M26.1655 20C25.2576 20 24.4388 19.6974 23.7089 19.0921C22.9969 18.4691 22.4272 17.6235 22 16.5554C21.5727 15.4873 21.3591 14.2946 21.3591 12.9773C21.3591 11.66 21.5727 10.4762 22 9.42591C22.4272 8.37562 23.0058 7.53895 23.7356 6.9159C24.4655 6.29284 25.2755 5.98132 26.1655 5.98132C27.0734 5.98132 27.8834 6.29284 28.5954 6.9159C29.3253 7.53895 29.9038 8.37562 30.3311 9.42591C30.7583 10.4762 30.9719 11.66 30.9719 12.9773C30.9719 14.2946 30.7583 15.4873 30.3311 16.5554C29.9216 17.6235 29.352 18.4691 28.6221 19.0921C27.8923 19.6974 27.0734 20 26.1655 20ZM26.1655 19.3325C28.0169 19.3325 28.9426 17.2141 28.9426 12.9773C28.9426 8.75835 28.0169 6.64887 26.1655 6.64887C24.3142 6.64887 23.3885 8.75835 23.3885 12.9773C23.3885 17.2141 24.3142 19.3325 26.1655 19.3325Z" fill="white"/><path d="M16.3562 7.85047C17.086 6.60437 17.9672 5.98132 18.9997 5.98132C19.5872 5.98132 20.0233 6.15933 20.3081 6.51536C20.5929 6.85359 20.7354 7.23632 20.7354 7.66356C20.7354 8.00179 20.6464 8.27771 20.4683 8.49133C20.3081 8.70495 20.05 8.81176 19.694 8.81176C19.4091 8.81176 19.1955 8.74945 19.0531 8.62484C18.9285 8.48243 18.8217 8.32222 18.7327 8.1442C18.6615 7.96619 18.5725 7.81487 18.4657 7.69026C18.3589 7.54785 18.1808 7.47664 17.9316 7.47664C17.6112 7.47664 17.3086 7.67246 17.0237 8.06409C16.7389 8.43793 16.4986 8.94527 16.3028 9.58612C16.1248 10.227 16.0358 10.9568 16.0358 11.7757V17.9706C16.0358 18.3445 16.0892 18.6115 16.196 18.7717C16.3206 18.9319 16.5698 19.0298 16.9436 19.0654L17.6646 19.1455C17.8604 19.1811 17.9583 19.279 17.9583 19.4393C17.9583 19.6529 17.8248 19.7597 17.5578 19.7597H13.0451C12.7781 19.7597 12.6446 19.6618 12.6446 19.466C12.6446 19.3058 12.7603 19.1989 12.9917 19.1455L13.3121 19.0921C13.686 19.0209 13.9263 18.9141 14.0331 18.7717C14.1577 18.6115 14.22 18.3445 14.22 17.9706V8.99867C14.22 8.67825 14.1666 8.46463 14.0598 8.35782C13.9708 8.23321 13.8017 8.1531 13.5524 8.1175L12.9917 8.03739C12.7603 8.01959 12.6446 7.92168 12.6446 7.74367C12.6446 7.60125 12.787 7.50334 13.0718 7.44994C13.6237 7.36093 14.042 7.21852 14.3268 7.0227C14.6294 6.82689 14.941 6.58657 15.2614 6.30174C15.4216 6.14153 15.5551 6.06142 15.6619 6.06142C15.8221 6.06142 15.9022 6.16823 15.9022 6.38185V7.82377C15.9022 7.94838 15.9557 8.02849 16.0625 8.06409C16.1693 8.08189 16.2672 8.01069 16.3562 7.85047Z" fill="white"/><path d="M0.400534 19.7597C0.133511 19.7597 0 19.6618 0 19.466C0 19.3058 0.11571 19.1989 0.34713 19.1455L0.961282 19.0387C1.33511 18.9675 1.57543 18.8696 1.68224 18.745C1.80685 18.6204 1.86916 18.3712 1.86916 17.9973V2.2964C1.86916 1.92257 1.80685 1.67335 1.68224 1.54874C1.57543 1.42413 1.33511 1.32622 0.961282 1.25501L0.34713 1.1482C0.11571 1.0948 0 0.987988 0 0.827774C0 0.631958 0.133511 0.53405 0.400534 0.53405H5.8211C6.71117 0.53405 7.50334 0.720965 8.1976 1.0948C8.89186 1.46863 9.4348 1.97597 9.82644 2.61683C10.2359 3.25768 10.4406 3.98754 10.4406 4.80641C10.4406 5.60748 10.2003 6.35515 9.71963 7.04941C9.25679 7.72586 8.58033 8.29551 7.69026 8.75835C7.58345 8.81176 7.53004 8.88296 7.53004 8.97197C7.53004 9.06098 7.59235 9.12328 7.71696 9.15889C8.92746 9.56832 9.86204 10.227 10.5207 11.1349C11.1794 12.0249 11.5087 13.0841 11.5087 14.3124C11.5087 15.3627 11.2684 16.3062 10.7877 17.1429C10.3071 17.9617 9.63952 18.6026 8.78505 19.0654C7.94838 19.5283 6.996 19.7597 5.92791 19.7597H0.400534ZM5.18024 8.78505C6.12372 8.78505 6.90699 8.42012 7.53004 7.69026C8.1709 6.9426 8.49132 6.01692 8.49132 4.91322C8.49132 3.80953 8.1887 2.91945 7.58345 2.243C6.9782 1.54874 6.17713 1.20161 5.18024 1.20161C4.23676 1.20161 3.76502 1.55764 3.76502 2.2697V7.31643C3.76502 7.83267 3.87183 8.20651 4.08545 8.43792C4.31687 8.66934 4.6818 8.78505 5.18024 8.78505ZM5.58078 19.0921C6.73788 19.0921 7.68136 18.656 8.41122 17.7837C9.14108 16.8936 9.50601 15.7098 9.50601 14.2323C9.50601 12.7548 9.13218 11.5888 8.38451 10.7343C7.65465 9.87985 6.66667 9.45261 5.42056 9.45261C4.31687 9.45261 3.76502 9.88875 3.76502 10.761V17.2497C3.76502 18.478 4.37027 19.0921 5.58078 19.0921Z" fill="white"/></g></svg></a>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h1>Nasıl yardımcı olabiliriz?</h1>
+        <p class="lead">Broken ile ilgili sorularına buradan yanıt bulabilir ya da doğrudan bize yazabilirsin.</p>
+      </section>
+
+      <section class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Bize ulaş</h2>
+        <p>Bir sorun mu yaşıyorsun, bir önerin mi var? E-postanı okuyup en kısa sürede dönüş yapıyoruz.</p>
+        <a class="btn" href="mailto:support@brokens.app?subject=Broken%20destek">support@brokens.app</a>
+        <p class="meta">Yazarken rumuzunu, cihaz modelini ve iOS sürümünü eklersen daha hızlı yardımcı olabiliriz. Genellikle 2 iş günü içinde yanıt veriyoruz.</p>
+      </section>
+
+      <h2 class="section">Sık sorulan sorular</h2>
+
+      <details>
+        <summary>Broken nedir?</summary>
+        <div class="answer">
+          <p>Broken, gerçek kimliğini paylaşmadan, bir rumuzla dertleşebileceğin bir uygulamadır. Seninle benzer şeyler yaşamış kişilere dertleşme isteği gönderebilir, kabul edilen isteklerde sohbet edebilirsin.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Rumuzumu nasıl seçerim? Değiştirebilir miyim?</summary>
+        <div class="answer">
+          <p>Kayıt sırasında uygulama senin için bir rumuz üretir. Beğenmezsen “Farklı bir rumuz öner” ile beğendiğin bir rumuz çıkana kadar yeni öneriler alabilirsin. Güvenliğin için rumuzlar serbest metinle yazılamaz.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Dertleşme isteği nasıl çalışır?</summary>
+        <div class="answer">
+          <p>Gelen istekler Mesajlar ekranında “Dertleşme isteği” etiketiyle görünür. İsteği açtığında gönderenin rumuzunu, yaşını ve mesajını görürsün.</p>
+          <p>Kabul edersen sohbet başlar. Reddedersen istek listenden kalkar ve gönderene herhangi bir bildirim gitmez.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Birini nasıl engellerim?</summary>
+        <div class="answer">
+          <p>Bir isteği ya da sohbeti açıp sağ üstteki butona dokun ve “Engelle”yi seç. Engellediğin kişi sana bir daha mesaj veya istek gönderemez.</p>
+          <p>Uygunsuz bulduğun bir hikâyeyi uygulama içinden şikâyet edebilirsin. Kimlerin sana istek gönderebileceğini Profil &gt; Ayarlar’dan değiştirebilirsin. Ciddi bir durum için rumuzla birlikte <a href="mailto:support@brokens.app?subject=Bildirim">support@brokens.app</a> adresine de yazabilirsin.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Konum izni neden isteniyor?</summary>
+        <div class="answer">
+          <p>Konum yalnızca profilindeki şehri otomatik doldurmak için, bir kez ve cihazında kullanılır; koordinatların sunucularımıza gönderilmez. İzin vermek zorunda değilsin; vermezsen şehrini listeden kendin seçebilirsin. İzni dilediğin zaman iPhone’unda Ayarlar &gt; Broken &gt; Konum bölümünden değiştirebilirsin.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Hesabımı nasıl silerim?</summary>
+        <div class="answer">
+          <p>Uygulamada Profil &gt; Hesap bilgileri &gt; Hesabı sil adımlarını izle. Hesabın, profilin, hikâyen ve mesajların hemen ve kalıcı olarak silinir; bu işlem geri alınamaz.</p>
+          <p>Uygulamaya erişemiyorsan, giriş yaptığın Apple hesabının e-posta adresinden <a href="mailto:support@brokens.app?subject=Hesap%20silme%20talebi">support@brokens.app</a> adresine yazabilirsin.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Verilerim nasıl korunuyor?</summary>
+        <div class="answer">
+          <p>Broken’da gizlilik esastır. Diğer kullanıcılar seni yalnızca rumuzun ve profilinde paylaştığın bilgilerle görür. Hangi verileri neden topladığımızı <a href="../gizlilik/">Gizlilik Politikası</a> sayfamızda bulabilirsin.</p>
+        </div>
+      </details>
+
+      <div class="note">
+        <strong>Kendini acil bir tehlike içinde hissediyorsan</strong> lütfen beklemeden 112 Acil Çağrı Merkezi’ni ara. Broken bir dertleşme alanıdır; profesyonel destek veya acil yardımın yerini tutmaz.
+      </div>
+    </main>
+
+    <footer>
+      © 2026 Broken · <a href="../kullanim-kosullari/">Kullanım Koşulları</a> · <a href="../gizlilik/">Gizlilik Politikası</a> · <a href="mailto:support@brokens.app">support@brokens.app</a>
+    </footer>
+  </div>
+</body>
+</html>
