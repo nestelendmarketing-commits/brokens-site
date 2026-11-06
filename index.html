@@ -22,7 +22,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-32.png">
 <link rel="apple-touch-icon" href="assets/img/icon-180.png">
 <link rel="preload" href="assets/fonts/open-sans-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" type="image/avif" href="assets/img/sea-hero-1376.avif" imagesrcset="assets/img/sea-hero-960.avif 960w, assets/img/sea-hero-1376.avif 1376w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" href="assets/img/sea-hero-1376.avif" imagesrcset="assets/img/sea-hero-960.avif 960w, assets/img/sea-hero-1376.avif 1376w, assets/img/sea-hero-1920.avif 1920w, assets/img/sea-hero-2752.avif 2752w" imagesizes="100vw" fetchpriority="high">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Broken: Ayrıldıysan dertleş","operatingSystem":"iOS","applicationCategory":"LifestyleApplication","inLanguage":"tr","url":"https://brokens.app/","description":"Ayrılık yaşamış yetişkinlerin, kimliklerini açıklamadan rumuzlarıyla dertleştiği uygulama.","downloadUrl":"https://apps.apple.com/tr/app/broken-ayr%C4%B1ld%C4%B1ysan-dertle%C5%9F/id6824498905?l=tr","contentRating":"18+","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"}}</script>
 <style>
 @font-face {
@@ -317,6 +317,7 @@ p { margin: 0; }
 .chapters__bg.is-active { opacity: 1; scale: 1; }
 .chapters__bg img { width: 100%; height: 100%; object-fit: cover; }
 .chapters__bg--dawn img { object-position: 50% 42%; }
+@media (min-aspect-ratio: 1/1) { .chapters__bg--dawn img, .cta__media img { object-position: 50% 50%; } }
 .chapters__shade {
   position: absolute; inset: 0;
   background:
@@ -457,6 +458,17 @@ p { margin: 0; }
 .cta h2 { font-size: clamp(44px, 6vw, 96px); line-height: .98; max-width: 11em; }
 .cta p { font-size: clamp(17px, 1.4vw, 21px); font-weight: 520; margin: 22px 0 36px; color: rgba(28, 26, 23, .82); }
 
+@media (min-aspect-ratio: 1/1) and (min-width: 900px) {
+  .cta { text-align: left; }
+  .cta__inner { justify-items: start; padding-top: clamp(130px, 18vh, 220px); }
+  .cta h2 { max-width: 8em; }
+  .cta__media::after {
+    background:
+      linear-gradient(180deg, var(--ink) 0%, rgba(14, 24, 35, 0) 16%),
+      radial-gradient(48% 50% at 18% 30%, rgba(255, 233, 200, .6) 0%, rgba(255, 233, 200, 0) 100%),
+      linear-gradient(0deg, rgba(14, 24, 35, .9) 0%, rgba(14, 24, 35, 0) 30%);
+  }
+}
 /* Footer */
 .site-footer { background: var(--ink); padding: 72px 0 40px; font-size: 15px; }
 .footer__top { display: grid; grid-template-columns: 1.2fr 1fr auto; gap: 40px; align-items: start; padding-bottom: 48px; border-bottom: 1px solid rgba(238, 242, 246, .1); }
@@ -531,9 +543,9 @@ p { margin: 0; }
     <div class="hero__media" data-hero-media>
       <div class="hero__frame">
         <picture>
-          <source type="image/avif" srcset="assets/img/sea-hero-960.avif 960w, assets/img/sea-hero-1376.avif 1376w" sizes="100vw">
-          <source type="image/webp" srcset="assets/img/sea-hero-960.webp 960w, assets/img/sea-hero-1376.webp 1376w" sizes="100vw">
-          <img class="hero__img" src="assets/img/sea-hero-1376.jpg" srcset="assets/img/sea-hero-960.jpg 960w, assets/img/sea-hero-1376.jpg 1376w" sizes="100vw" width="1376" height="768" alt="" fetchpriority="high" data-hero-img>
+          <source type="image/avif" srcset="assets/img/sea-hero-960.avif 960w, assets/img/sea-hero-1376.avif 1376w, assets/img/sea-hero-1920.avif 1920w, assets/img/sea-hero-2752.avif 2752w" sizes="100vw">
+          <source type="image/webp" srcset="assets/img/sea-hero-960.webp 960w, assets/img/sea-hero-1376.webp 1376w, assets/img/sea-hero-1920.webp 1920w, assets/img/sea-hero-2752.webp 2752w" sizes="100vw">
+          <img class="hero__img" src="assets/img/sea-hero-1920.jpg" srcset="assets/img/sea-hero-960.jpg 960w, assets/img/sea-hero-1376.jpg 1376w, assets/img/sea-hero-1920.jpg 1920w, assets/img/sea-hero-2752.jpg 2752w" sizes="100vw" width="2752" height="1536" alt="" fetchpriority="high" data-hero-img>
         </picture>
         <canvas class="hero__gl" aria-hidden="true" data-hero-gl></canvas>
       </div>
@@ -594,6 +606,9 @@ p { margin: 0; }
       </div>
       <div class="chapters__bg chapters__bg--dawn" data-bg>
         <picture>
+          <source media="(min-aspect-ratio: 1/1)" type="image/avif" srcset="assets/img/sea-dawn-wide-1600.avif 1600w, assets/img/sea-dawn-wide-2448.avif 2448w" sizes="100vw">
+          <source media="(min-aspect-ratio: 1/1)" type="image/webp" srcset="assets/img/sea-dawn-wide-1600.webp 1600w, assets/img/sea-dawn-wide-2448.webp 2448w" sizes="100vw">
+          <source media="(min-aspect-ratio: 1/1)" srcset="assets/img/sea-dawn-wide-1600.jpg 1600w, assets/img/sea-dawn-wide-2448.jpg 2448w" sizes="100vw">
           <source type="image/avif" srcset="assets/img/sea-dawn-480.avif 480w, assets/img/sea-dawn-768.avif 768w" sizes="100vw">
           <source type="image/webp" srcset="assets/img/sea-dawn-480.webp 480w, assets/img/sea-dawn-768.webp 768w" sizes="100vw">
           <img src="assets/img/sea-dawn-768.jpg" width="768" height="1376" alt="" loading="lazy" decoding="async">
@@ -786,7 +801,10 @@ p { margin: 0; }
   <section class="cta" aria-labelledby="cta-title">
     <div class="cta__media">
       <picture>
-        <source type="image/avif" srcset="assets/img/sea-dawn-480.avif 480w, assets/img/sea-dawn-768.avif 768w" sizes="100vw">
+        <source media="(min-aspect-ratio: 1/1)" type="image/avif" srcset="assets/img/sea-dawn-wide-1600.avif 1600w, assets/img/sea-dawn-wide-2448.avif 2448w" sizes="100vw">
+          <source media="(min-aspect-ratio: 1/1)" type="image/webp" srcset="assets/img/sea-dawn-wide-1600.webp 1600w, assets/img/sea-dawn-wide-2448.webp 2448w" sizes="100vw">
+          <source media="(min-aspect-ratio: 1/1)" srcset="assets/img/sea-dawn-wide-1600.jpg 1600w, assets/img/sea-dawn-wide-2448.jpg 2448w" sizes="100vw">
+          <source type="image/avif" srcset="assets/img/sea-dawn-480.avif 480w, assets/img/sea-dawn-768.avif 768w" sizes="100vw">
         <source type="image/webp" srcset="assets/img/sea-dawn-480.webp 480w, assets/img/sea-dawn-768.webp 768w" sizes="100vw">
         <img src="assets/img/sea-dawn-768.jpg" width="768" height="1376" alt="" loading="lazy" decoding="async">
       </picture>
